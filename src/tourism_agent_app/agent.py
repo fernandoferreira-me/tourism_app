@@ -54,6 +54,8 @@ class MappingTemplate:
         The itinerary will be denoted by four hashtags. 
         Convert it into a list containing dictionaries with the latitude, 
         longitude, address and name of each location.
+        
+        Retrieve a clean JSON object, no markdown notation.
 
         For example:
 
@@ -114,6 +116,8 @@ class CenterMapTemplate:
         You receive a list of coordinates and must return the center of the map (aka. 
         the geodesic center of all the coordinates) and the zoom level that will allow.
         
+        Retrieve a clean JSON object, no markdown notation.
+
         For example:
         ####
         {{
@@ -161,7 +165,7 @@ class Agent:
     def __init__(
         self,
         open_ai_api_key,
-        model= 'gpt-4-turbo',
+        model= 'gpt-4o',
         temperature = 0,
         verbose = True
     ):
